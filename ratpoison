@@ -1,0 +1,11 @@
+escape C-e
+
+bind C-q exec st
+
+exec setxkbmap -option keypad:pointerkeys
+exec xkbset ma 60 10 10 5 2
+
+exec xcompmgr &
+exec $HOME/.fehbg
+
+exec st
