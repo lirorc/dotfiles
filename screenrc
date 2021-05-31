@@ -1,0 +1,28 @@
+hardstatus alwayslastline "%{=b}%{G}%{b}%w %=%{kG}%C%A  %d/%M/%Y "
+
+# Enable scroll back
+termcapinfo xterm|xterms|xs|rxvt ti@:te@
+
+# Turn off start message:
+startup_message off
+
+# Set messages timeout to three seconds: 
+msgwait 3
+
+# Enlarge buffer
+defscrollback 4096
+
+#Disable beep
+vbell off
+bell " %n %t !"
+
+#Nethack style messages
+nethack on
+
+caption splitonly "%2n %t"
+
+#Hide the bars
+rendition so =00
+caption string "%{03} "
+#Add colors
+term screen-256color
