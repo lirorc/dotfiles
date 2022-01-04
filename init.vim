@@ -3,6 +3,8 @@
 "Plug 'ervandew/supertab'
 "Plug 'kovisoft/paredit'
 "Plug 'junegunn/goyo.vim'
+"Plug 'mbbill/undotree'
+"Plug 'calebsmith/vim-lambdify'
 ""Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 ""Plug 'jmckiern/vim-venter'
 ""Plug 'davidhalter/jedi-vim'
@@ -15,12 +17,13 @@ set tabstop=2
 set shiftwidth=2
 set startofline
 "set expandtab
-set scrolloff=4
+set scrolloff=2
 "set noswapfile
 
 colorscheme slate
 
 imap jk <Esc>
+let mapleader=" "
 
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
