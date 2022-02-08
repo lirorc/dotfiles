@@ -5,6 +5,7 @@
 "Plug 'junegunn/goyo.vim'
 "Plug 'mbbill/undotree'
 "Plug 'calebsmith/vim-lambdify'
+"Plug 'wlangstroth/vim-racket'
 ""Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 ""Plug 'jmckiern/vim-venter'
 ""Plug 'davidhalter/jedi-vim'
@@ -24,6 +25,14 @@ colorscheme slate
 
 imap jk <Esc>
 let mapleader=" "
+
+call matchadd('Colorcolumn', '\%81v', 100)
+
+set listchars=tab:>~, nbsp:_,trail:.
+set list
+
+nnoremap <Space> :
+vnoremap <Space> :
 
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
