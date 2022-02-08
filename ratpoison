@@ -1,6 +1,8 @@
 escape C-e
 
-bind C-q exec st
+bind C-t exec st -A 0.4
+bind C-Tab focus
+bind C-q only
 
 exec setxkbmap -option keypad:pointerkeys
 exec xkbset ma 60 10 10 5 2
@@ -8,4 +10,4 @@ exec xkbset ma 60 10 10 5 2
 exec xcompmgr &
 exec $HOME/.fehbg
 
-exec st
+exec st -A 0.4
