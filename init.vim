@@ -18,13 +18,13 @@ set tabstop=2
 set shiftwidth=2
 set startofline
 "set expandtab
-set scrolloff=2
+set scrolloff=40
 "set noswapfile
 
 colorscheme slate
 
 imap jk <Esc>
-let mapleader=" "
+"let mapleader=" "
 
 call matchadd('Colorcolumn', '\%81v', 100)
 
