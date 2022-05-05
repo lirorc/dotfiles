@@ -1,0 +1,12 @@
+#!/bin/sh
+#xkbset ma 60 10 10 5 2
+#
+#xcompmgr &
+#$HOME/.fehbg
+#
+#st -A 0.4
+#setxkbmap us
+setxkbmap -option keypad:pointerkeys
+xmodmap ~/.Xmodmap
+#xcape -e 'Control_R=Return;Shift_L=BackSpace' -t 100
+xcape -e 'Control_R=Return' -t 200
