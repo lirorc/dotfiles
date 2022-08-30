@@ -1,5 +1,6 @@
 escape C-e
 
+bind C-s hsplit
 bind C-t exec st -A 0.4
 bind C-Tab focus
 bind C-q only
