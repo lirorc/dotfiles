@@ -1,6 +1,6 @@
 call plug#begin('~/.local/share/nvim/bundle/')
-"Plug 'hkupty/iron.nvim'
-Plug 'lirorc/iron.nvim'
+Plug 'hkupty/iron.nvim'
+"Plug 'lirorc/iron.nvim'
 Plug 'ervandew/supertab'
 Plug 'kovisoft/paredit'
 Plug 'junegunn/goyo.vim'
@@ -10,6 +10,8 @@ Plug 'calebsmith/vim-lambdify'
 Plug 'wlangstroth/vim-racket'
 Plug 'dense-analysis/ale'
 Plug 'ggandor/lightspeed.nvim'
+Plug 'mhinz/vim-signify'
+Plug 'preservim/vim-pencil'
 "Plug 'neovim/nvim-lspconfig'
 "Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 "Plug 'jmckiern/vim-venter'
@@ -23,10 +25,8 @@ set tabstop=2
 set shiftwidth=2
 set startofline
 set expandtab
-set scrolloff=100
+set scrolloff=999
 set noswapfile
-
-"colorscheme slate
 
 imap jk <Esc>
 let mapleader="\\"
@@ -60,5 +60,15 @@ tnoremap jk <C-\><C-n>
 luafile ~/.config/nvim/iron.lua
 map <F5> <Cmd>lua require("iron").core.send(vim.api.nvim_buf_get_option(0,"ft"), vim.api.nvim_buf_get_lines(0, 0, -1, false))<Cr>
 
-"set laststatus=1
 set laststatus=0
+set cursorline
+set cursorlineopt=line
+set cursorcolumn
+highlight cursorline cterm=none ctermbg=242
+"highlight cursorcolumn cterm=bold
+"highlight cursorcolumn cterm=strikethrough
+"highlight cursorline cterm=bold ctermbg=242
+
+"set noshowcmd
+
+""au FileType * call PareditInitBuffer()

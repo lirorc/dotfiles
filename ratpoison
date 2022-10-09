@@ -4,16 +4,22 @@ bind C-s hsplit
 bind C-t exec st -A 0.4
 bind C-Tab focus
 bind C-q only
-bind C-1 exec $browser
-bind C-2 exec emacs
 
-exec setxkbmap -option keypad:pointerkeys
-exec xkbset ma 60 10 10 5 2
+bind C-r remove
+bind C-g exec
+
+bind C-0 select 0
+bind C-1 select 1
+bind C-2 select 2
+bind C-3 select 3
+bind C-4 select 4
+bind C-5 select 5
+bind C-6 select 6
+bind C-7 select 7
 
 exec xcompmgr &
 exec $HOME/.fehbg
 exec rpws init 4 -k
-exec wmane LG3D
-#exec scripts.sh
 
-exec st -A 0.4
+#exec scripts.sh
+#exec wmname LG3D
