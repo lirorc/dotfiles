@@ -7,6 +7,16 @@
 #st -A 0.4
 #setxkbmap us
 setxkbmap -option keypad:pointerkeys
+xkbset ma 60 10 10 5 2
+
 xmodmap ~/.Xmodmap
+
 #xcape -e 'Control_R=Return;Shift_L=BackSpace' -t 100
 xcape -e 'Control_R=Return' -t 200
+
+wmname LG3D
+ibus-daemon -dr
+
+xinput disable $(xinput list | grep 'AT Translated Set' | cut -f2 | cut -d'=' -f2)
+
+export EDITOR=/usr/bin/nvim

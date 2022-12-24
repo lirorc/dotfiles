@@ -3,16 +3,27 @@ Plug 'hkupty/iron.nvim'
 "Plug 'lirorc/iron.nvim'
 Plug 'ervandew/supertab'
 Plug 'kovisoft/paredit'
-Plug 'junegunn/goyo.vim'
 Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'junegunn/gv.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'mbbill/undotree'
 Plug 'calebsmith/vim-lambdify'
 Plug 'wlangstroth/vim-racket'
 Plug 'dense-analysis/ale'
 Plug 'ggandor/lightspeed.nvim'
+Plug 'neovim/nvim-lspconfig'
 Plug 'mhinz/vim-signify'
 Plug 'preservim/vim-pencil'
-"Plug 'neovim/nvim-lspconfig'
+Plug 'ollykel/v-vim'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
+Plug 'glepnir/hlsearch.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+Plug 'mvllow/modes.nvim'
+Plug 'folke/zen-mode.nvim'
+"Plug 'junegunn/goyo.vim'
 "Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 "Plug 'jmckiern/vim-venter'
 "Plug 'davidhalter/jedi-vim'
@@ -27,6 +38,9 @@ set startofline
 set expandtab
 set scrolloff=999
 set noswapfile
+
+"colorscheme slate
+colorscheme torte
 
 imap jk <Esc>
 let mapleader="\\"
@@ -44,11 +58,18 @@ vnoremap <Space> :
 
 nmap <silent> <CR> <Plug>(iron-send-line)
 
+"noremap <CR> :bn <CR>
+"noremap <BS> :bp <CR>
 noremap <silent> <C-h> :bn <CR>
 noremap <silent> <C-l> :bp <CR>
+"nmap <silent> <C-h> :bn <CR>
+"nmap <silent> <C-l> :bp <CR>
 
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+
+"imap <C-u> <C-g>u<C-u>
+"imap <C-w> <C-g>u<C-w>
 
 vnoremap K xkP`[V`]
 vnoremap U xp`[V`]
@@ -68,6 +89,48 @@ highlight cursorline cterm=none ctermbg=242
 "highlight cursorcolumn cterm=bold
 "highlight cursorcolumn cterm=strikethrough
 "highlight cursorline cterm=bold ctermbg=242
+
+
+lua << EOF
+  require("zen-mode").setup {
+    window = {
+      backdrop = 0.95, -- shade the backdrop of the Zen window. Set to 1 to keep the same as Normal
+      -- height and width can be:
+      -- * an absolute number of cells when > 1
+      -- * a percentage of the width / height of the editor when <= 1
+      -- * a function that returns the width or the height
+      width = 100, -- width of the Zen window%120%
+      height = 1, -- height of the Zen window
+      -- by default, no options are changed for the Zen window
+      -- uncomment any of the options below, or add other vim.wo options you want to apply
+      options = {
+        -- signcolumn = "no", -- disable signcolumn
+        number = false, -- disable number column%
+        -- relativenumber = false, -- disable relative numbers
+        -- cursorline = false, -- disable cursorline
+        -- cursorcolumn = false, -- disable cursor column
+        -- foldcolumn = "0", -- disable fold column
+        -- list = false, -- disable whitespace characters
+      },
+    },
+    plugins = {
+      options = {
+        enabled = true,
+        ruler = true, -- disables the ruler text in the cmd line area%
+        showcmd = true, -- disables the command in the last line of the screen%
+      },
+      twilight = { enabled = true }, -- enable to start Twilight when zen mode opens
+      gitsigns = { enabled = false }, -- disables git signs
+      tmux = { enabled = false }, -- disables the tmux statusline
+    },
+    -- callback where you can add custom code when the Zen window opens
+    on_open = function(win)
+    end,
+    -- callback where you can add custom code when the Zen window closes
+    on_close = function()
+    end,
+  }
+EOF
 
 "set noshowcmd
 
