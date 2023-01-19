@@ -1,6 +1,8 @@
 escape C-e
 
-bind C-s hsplit
+bind C-h windows
+bind C-w hsplit
+bind C-s split
 bind C-t exec st -A 0.4
 bind C-Tab focus
 bind C-q only
@@ -16,10 +18,11 @@ bind C-4 select 4
 bind C-5 select 5
 bind C-6 select 6
 bind C-7 select 7
+bind C-minus select -
 
 exec xcompmgr &
 exec $HOME/.fehbg
 exec rpws init 4 -k
 
-#exec scripts.sh
+exec scripts.sh
 #exec wmname LG3D
