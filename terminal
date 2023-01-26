@@ -1,0 +1,4 @@
+static char *font = "IBMPlexMono-Bold:pixelsize=16:antialias=true:autohint=true";
+
+st-alpha-0.8.2
+st-anysize-0.8.1
