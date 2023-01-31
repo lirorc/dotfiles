@@ -23,6 +23,10 @@ Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'mvllow/modes.nvim'
 Plug 'folke/zen-mode.nvim'
+Plug 'romainl/vim-cool'
+Plug 'justinmk/vim-dirvish'
+Plug 'kristijanhusak/vim-dirvish-git'
+Plug 'terryma/vim-multiple-cursors'
 "Plug 'junegunn/goyo.vim'
 "Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 "Plug 'jmckiern/vim-venter'
@@ -32,15 +36,16 @@ Plug 'folke/zen-mode.nvim'
 call plug#end()
 
 set number
+set relativenumber
 set tabstop=2
 set shiftwidth=2
 set startofline
 set expandtab
 set scrolloff=999
 set noswapfile
+set termguicolors
 
-"colorscheme slate
-colorscheme torte
+colorscheme slate
 
 imap jk <Esc>
 let mapleader="\\"
