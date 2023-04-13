@@ -26,7 +26,8 @@ Plug 'folke/zen-mode.nvim'
 Plug 'romainl/vim-cool'
 Plug 'justinmk/vim-dirvish'
 Plug 'kristijanhusak/vim-dirvish-git'
-Plug 'terryma/vim-multiple-cursors'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
+"Plug 'terryma/vim-multiple-cursors'
 "Plug 'junegunn/goyo.vim'
 "Plug 'scrooloose/nerdtree', {'on': 'NerdTreeToggle'}
 "Plug 'jmckiern/vim-venter'
@@ -63,15 +64,29 @@ vnoremap <Space> :
 
 nmap <silent> <CR> <Plug>(iron-send-line)
 
-"noremap <CR> :bn <CR>
-"noremap <BS> :bp <CR>
-noremap <silent> <C-h> :bn <CR>
-noremap <silent> <C-l> :bp <CR>
+nnoremap <silent> <C-w><C-j> :bp <CR>
+nnoremap <silent> <C-w><C-k> :bn <CR>
+noremap <silent> <C-h> :bp <CR>
+noremap <silent> <C-l> :bn <CR>
 "nmap <silent> <C-h> :bn <CR>
 "nmap <silent> <C-l> :bp <CR>
 
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+
+inoremap J (
+inoremap K )
+inoremap H {
+inoremap L }
+inoremap U [
+inoremap I ]
+
+nnoremap <silent> <C-w><C-m> :q <CR>
+nnoremap <silent> ew :w <CR>
+
+nnoremap <silent> <C-space> :tabnew <CR>
+nnoremap <silent> <C-j> :tabprevious <CR>
+nnoremap <silent> <C-k> :tabnext <CR>
 
 "imap <C-u> <C-g>u<C-u>
 "imap <C-w> <C-g>u<C-w>
