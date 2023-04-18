@@ -64,10 +64,8 @@ vnoremap <Space> :
 
 nmap <silent> <CR> <Plug>(iron-send-line)
 
-nnoremap <silent> <C-w><C-j> :bp <CR>
-nnoremap <silent> <C-w><C-k> :bn <CR>
-noremap <silent> <C-h> :bp <CR>
-noremap <silent> <C-l> :bn <CR>
+noremap <silent> <C-h> :bn <CR>
+noremap <silent> <C-l> :bp <CR>
 "nmap <silent> <C-h> :bn <CR>
 "nmap <silent> <C-l> :bp <CR>
 
@@ -82,11 +80,12 @@ inoremap U [
 inoremap I ]
 
 nnoremap <silent> <C-w><C-m> :q <CR>
-nnoremap <silent> ew :w <CR>
+nnoremap <silent> w<Space> :w <CR>
+
 
 nnoremap <silent> <C-space> :tabnew <CR>
-nnoremap <silent> <C-j> :tabprevious <CR>
 nnoremap <silent> <C-k> :tabnext <CR>
+nnoremap <silent> <C-j> :tabprevious <CR>
 
 "imap <C-u> <C-g>u<C-u>
 "imap <C-w> <C-g>u<C-w>
@@ -109,6 +108,29 @@ highlight cursorline cterm=none ctermbg=242
 "highlight cursorcolumn cterm=bold
 "highlight cursorcolumn cterm=strikethrough
 "highlight cursorline cterm=bold ctermbg=242
+
+function! Colemak ()
+  imap ei <Esc>
+
+  nnoremap n h
+  vnoremap n h
+  nnoremap e j
+  vnoremap e j
+  nnoremap i k
+  vnoremap i k
+  nnoremap o l
+  vnoremap o l
+
+  nnoremap l o
+  nnoremap L O
+
+  inoremap E (
+  inoremap I )
+  inoremap N {
+  inoremap O }
+  inoremap U [
+  inoremap Y ]
+endfunction
 
 
 lua << EOF
