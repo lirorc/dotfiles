@@ -1,4 +1,28 @@
 clear lock
 clear control
-keycode 66 = Control_R
+keycode 66 = Control_L
 add control = Control_L Control_R
+
+keycode 16 = 7
+keycode 17 = 8
+keycode 18 = 9 ampersand
+keycode 19 = 0 asterisk
+keycode 20 = minus underscore
+keycode 21 = equal plus
+
+keycode 24 = b
+keycode 27 = p
+keycode 33 = y
+keycode 34 = semicolon colon
+
+keycode 45 = n braceleft braceleft
+keycode 46 = e parenleft parenleft
+keycode 47 = i parenright parenright
+keycode 48 = o braceright braceright
+
+keycode 50 = Shift_L
+keycode 51 = slash question
+keycode 55 = v
+keycode 57 = backslash bar
+keycode 60 = j comma less less less
+keycode 61 = q period greater greater greater
