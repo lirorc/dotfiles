@@ -1,0 +1,40 @@
+set autolist
+set complete = Enhance
+set correct = all
+
+alias .. 'cd ..'
+
+set prompt = "?: "
+set savehist = 100000
+set history = 1000
+
+alias vi nvim
+alias a 'lf'
+alias s 'tmux'
+alias ls 'ls --color=auto -CF'
+alias z 'zathura'
+alias cc 'gcc'
+alias g 'guile'
+alias f 'gforth'
+alias rr 'objdump -d -Mintel --no-show-raw-insn'
+alias ls 'ls -CF --color=always'
+alias l 'xbacklight -set'
+alias la 'tree -CFa -L 1'
+alias ipa 'ip -br a'
+alias SS 'ss -plunt'
+alias aas 'aarch64-linux-gnu-as'
+alias ald 'aarch64-linux-gnu-ld'
+alias n 'nmcli'
+alias c 'musikcube'
+alias vi 'nvim'
+alias non 'n r w on'
+alias nof 'n r w off'
+
+set PATH = ("$PATH":"$home/.config/guix/current/bin/")
+set GUIX_PROFILE = "/home/lirorc/.guix-profile"
+
+set SDL_JOYSTICK_DEVICE = /dev/input/js0
+
+setenv EDITOR /usr/bin/nvim
+setenv PAGER less
+setenv BLOCKSIZE M
