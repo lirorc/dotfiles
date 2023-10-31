@@ -30,9 +30,6 @@ alias vi 'nvim'
 alias non 'n r w on'
 alias nof 'n r w off'
 
-set PATH = ("$PATH":"$home/.config/guix/current/bin/")
-set GUIX_PROFILE = "/home/lirorc/.guix-profile"
-
 set SDL_JOYSTICK_DEVICE = /dev/input/js0
 
 setenv EDITOR /usr/bin/nvim
