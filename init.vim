@@ -7,22 +7,28 @@ set noswapfile
 set termguicolors
 
 "colorscheme elflord
-colorscheme industry
+"colorscheme koehler
+"colorscheme industry
+colorscheme lunaperche
 
 let mapleader="\\"
 
-set conceallevel=1
-set concealcursor=nv
 
+call matchadd('Conceal', '->', 10,-1, {'conceal':'→'})
+call matchadd('Conceal', ':=', 10,-1, {'conceal':'≔'})
 call matchadd('Conceal', 'lambda', 10,-1, {'conceal':'λ'})
-hi Conceal ctermbg=NONE ctermfg=red guifg=red
+call matchadd('Conceal', 'fn', 10,-1, {'conceal':'Φ'})
+"hi Conceal ctermbg=black guibg=black ctermfg=red guifg=red
+
+set conceallevel=2
+set concealcursor=v
 
 "set colorcolumn=81
 "highlight colorcolumn ctermbg=black
 call matchadd('Colorcolumn', '\%81v', 100)
 
 "set listchars=tab:--→,nbsp:_,trail:␠,eol:¬
-set listchars=tab:--→,nbsp:_,trail:␣,eol:⏎,space:␣
+set listchars=tab:>~,nbsp:_,trail:␣,eol:⏎,space:␣
 set list
 
 nnoremap <Space> :
@@ -34,6 +40,15 @@ noremap <silent> <C-h> :bn <CR>
 noremap <silent> <C-l> :bp <CR>
 "nmap <silent> <C-h> :bn <CR>
 "nmap <silent> <C-l> :bp <CR>
+
+"function! Turkify ()
+"inoremap ii ı
+"inoremap gg ğ
+"inoremap ss ş
+"inoremap oo ö
+"inoremap uu ü
+"inoremap cc ç
+"endfunction
 
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
@@ -66,7 +81,7 @@ highlight cursorline cterm=none ctermbg=242
 "highlight cursorline cterm=bold ctermbg=242
 
 function! Colemak ()
-	imap b<C-Space> <Esc>
+	inoremap <C-Space> <Esc>
 
 	nnoremap n h
 	vnoremap n h
@@ -77,9 +92,6 @@ function! Colemak ()
 	nnoremap o l
 	vnoremap o l
 
-	nnoremap l o
-	nnoremap L O
-
 	inoremap E (
 	inoremap I )
 	inoremap N {
@@ -89,9 +101,9 @@ function! Colemak ()
 
 	nnoremap ; o
 	nnoremap : O
+
+	nnoremap h n
+	nnoremap H N
 endfunction
 call Colemak()
 
-"set noshowcmd
-
-""au FileType * call PareditInitBuffer()
