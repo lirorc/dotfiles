@@ -26,14 +26,15 @@ call matchadd('Conceal', '>=', 10,-1, {'conceal':'≥'})
 call matchadd('Conceal', '<=', 10,-1, {'conceal':'≤'})
 call matchadd('Conceal', '!=', 10,-1, {'conceal':'≠'})
 call matchadd('Conceal', ':=', 10,-1, {'conceal':'≔'})
-call matchadd('Conceal', 'not', 10,-1, {'conceal':'¬'})
+call matchadd('Conceal', '\<not\>', 10,-1, {'conceal':'¬'})
+call matchadd('Conceal', '!', 09,-1, {'conceal':'¬'})
 
-call matchadd('Conceal', 'lambda', 10,-1, {'conceal':'λ'})
-call matchadd('Conceal', 'fn', 10,-1, {'conceal':'Φ'})
-call matchadd('Conceal', 'let', 10,-1, {'conceal':'λ'})
+call matchadd('Conceal', '\<lambda\>', 10,-1, {'conceal':'λ'})
+call matchadd('Conceal', '\<fn\>', 10,-1, {'conceal':'Φ'})
+call matchadd('Conceal', '\<let\>', 10,-1, {'conceal':'λ'})
 
-call matchadd('Conceal', 'int', 10,-1, {'conceal':'ℤ'})
-call matchadd('Conceal', 'void', 10,-1, {'conceal':'∅'})
+call matchadd('Conceal', '\<int\>', 10,-1, {'conceal':'ℤ'})
+call matchadd('Conceal', '\<void\>', 10,-1, {'conceal':'∅'})
 "hi Conceal ctermbg=black guibg=black ctermfg=red guifg=red
 
 set conceallevel=2
@@ -137,35 +138,63 @@ function! Chordify ()
 	Arpeggio inoremap be = 
 	Arpeggio inoremap is == 
 	Arpeggio inoremap gt > 
-	Arpeggio inoremap ge >= 
+	Arpeggio inoremap eg >= 
 	Arpeggio inoremap ls < 
-	Arpeggio inoremap le <= 
-	Arpeggio inoremap ad & 
-	Arpeggio inoremap po * 
+	Arpeggio inoremap el <= 
+	Arpeggio inoremap nt not 
+
+	Arpeggio inoremap et & 
+
+	Arpeggio inoremap ut * 
+	Arpeggio inoremap dv / 
+	Arpeggio inoremap ad + 
+	Arpeggio inoremap su - 
 
 	Arpeggio inoremap ce case 
-	Arpeggio inoremap sh switch 
+	Arpeggio inoremap hs switch 
 
 	Arpeggio inoremap if if 
 	Arpeggio inoremap ei else if 
 	Arpeggio inoremap es else 
 
+	Arpeggio inoremap ci include 
 	Arpeggio inoremap st static 
 	Arpeggio inoremap in inline 
-	Arpeggio inoremap vi void 
+	Arpeggio inoremap pr pragma 
+	Arpeggio inoremap no once 
+	Arpeggio inoremap rt return 
+
+	Arpeggio inoremap rs struct 
+	Arpeggio inoremap iv void 
 	Arpeggio inoremap it int 
-	Arpeggio inoremap do double 
+	Arpeggio inoremap db double 
 	Arpeggio inoremap fl float 
 	Arpeggio inoremap ch char 
+	Arpeggio inoremap sz size_t 
 
 	Arpeggio inoremap lt let 
-	Arpeggio inoremap bf buffer 
-	Arpeggio inoremap te the 
-	Arpeggio inoremap to to 
-	Arpeggio inoremap in in 
+	Arpeggio inoremap ek key 
+	Arpeggio inoremap lv value 
+	Arpeggio inoremap dh head 
+	Arpeggio inoremap at tail 
+	Arpeggio inoremap ers rest 
+	Arpeggio inoremap ast stack 
+	Arpeggio inoremap co // 
+
+	Arpeggio inoremap do do 
+	Arpeggio inoremap lw while 
+	Arpeggio inoremap fo for 
+
+	Arpeggio inoremap rw write(
+	Arpeggio inoremap dr read(
+	Arpeggio inoremap mst memset(
+	Arpeggio inoremap cm memcpy(
+	Arpeggio inoremap fp printf(
+
+	Arpeggio inoremap ei <esc>
 endfunction
 
-" call cursor(+0, +2)
+" call cursor(+0, +0)
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 25
