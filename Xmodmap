@@ -9,20 +9,41 @@ keycode 18 = 9 ampersand
 keycode 19 = 0 asterisk
 keycode 20 = minus underscore
 keycode 21 = equal plus
+keycode 22 = BackSpace
 
 keycode 24 = b
+keycode 25 = w
+keycode 26 = f
 keycode 27 = p
+keycode 28 = comma less less
+
+keycode 30 = period greater greater
+keycode 31 = l
+keycode 32 = u
 keycode 33 = y
 keycode 34 = semicolon colon
+!keycode 34 = BackSpace colon
+keycode 35 = apostrophe quotedbl
 
-keycode 45 = n braceleft braceleft
-keycode 46 = e parenleft parenleft
-keycode 47 = i parenright parenright
-keycode 48 = o braceright braceright
+keycode 38 = a
+keycode 39 = r
+keycode 40 = s
+keycode 41 = t
+
+keycode 45 = n
+keycode 46 = e
+keycode 47 = i
+keycode 48 = o
 
 keycode 50 = Shift_L
 keycode 51 = slash question
+keycode 52 = x
+keycode 53 = c
+keycode 54 = d
 keycode 55 = v
+keycode 56 = z
 keycode 57 = backslash bar
-keycode 60 = j comma less less less
-keycode 61 = q period greater greater greater
+keycode 60 = j
+!comma less less less
+keycode 61 = q
+!period greater greater greater
