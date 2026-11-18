@@ -1,0 +1,38 @@
+bind C-h windows
+bind C-w hsplit
+bind C-s split
+bind C-t exec st
+bind C-Tab focus
+bind C-o only
+bind C-comma banish
+
+bind C-f focuslast
+bind C-space other
+
+bind C-r remove
+bind C-g exec
+
+bind C-0 select 0
+bind C-1 select 1
+bind C-2 select 2
+bind C-3 select 3
+bind C-4 select 4
+bind C-5 select 5
+bind C-6 select 6
+bind C-7 select 7
+bind C-minus select -
+
+set bargravity s
+gravity c
+bind C-z set padding 0 0 0 0
+bind C-x set padding 330 0 330 0
+bind C-c set padding 420 0 420 0
+
+exec xrandr --output eDP-1 --off
+
+exec xcompmgr &
+exec $HOME/.fehbg
+exec rpws init 4 -k
+
+exec wmname LG3D
+
